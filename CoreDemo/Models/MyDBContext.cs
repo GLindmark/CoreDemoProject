@@ -12,5 +12,6 @@ namespace CoreDemo.Models {
         public DbSet<Customer> Customers { get; set; }// the "Customers" will be the table name in SQL
 
 
+
     }
 }
