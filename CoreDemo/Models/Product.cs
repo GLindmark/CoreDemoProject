@@ -5,6 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace CoreDemo.Models {
+
+    /// <summary>
+    /// The product class for EF
+    /// by Glenn Lindmark
+    /// August 20, 2019
+    /// </summary>
+
     public class Product {
 
         [Key]

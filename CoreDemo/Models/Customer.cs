@@ -12,6 +12,7 @@ namespace CoreDemo.Models
         public int CustomerId { get; set; }
 
         [MaxLength(30)]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
         [MaxLength(50)]

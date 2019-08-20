@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,6 +28,11 @@ namespace CoreDemo {
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //TODO: Put this in the json file!
+            string connstr = @"Data Source=DESKTOP-8R894VL\SQLEXPRESS;Initial Catalog=CoreMVCDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            services.AddDbContext<Models.MyDBContext>(options => options.UseSqlServer(connstr));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
